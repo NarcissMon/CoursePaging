@@ -4,13 +4,13 @@ import kotlinx.coroutines.delay
 
 class Repository {
 
-    private val remoteDataSource = (1..10000).map {
+    private val remoteDataSource = (1..1000).map {
         ListItem(
             title = "Курс $it",
             description = "Описание курса $it"
         )
     }
-
+        //
     suspend fun getItems(page: Int, pageSize: Int): Result<List<ListItem>> {
         delay(2000L)
         val startingIndex = page * pageSize
