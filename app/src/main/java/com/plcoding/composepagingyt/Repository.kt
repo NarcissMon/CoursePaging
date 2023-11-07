@@ -4,7 +4,7 @@ import kotlinx.coroutines.delay
 
 class Repository {
 
-    private val remoteDataSource = (1..1000).map {
+    private val remoteDataSource = (1..10000).map {
         ListItem(
             title = "Курс $it",
             description = "Описание курса $it"
